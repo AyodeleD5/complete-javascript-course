@@ -22,6 +22,34 @@
         color: white;
       }
     </style>
+
+    <script>
+	//Arrow function to calculate the years left for retirement
+	const yearsUntilRetirement = (birthYear, firstName) => {
+		const age = 2024 - birthYear;
+		const retirement = 65 - age;
+		if(retirement > 0)
+			return `${firstName} retires in ${retirement} years`;
+		else{
+			return `${firstName} already retired ${retirement * -1} years ago`;
+		}
+
+	}
+
+	function cutFruitsInto(fruit){
+		return fruit * 5;
+	}
+
+	function fruitProcessor(apples, oranges){
+		const applePieces = cutFruitsInto(apples);
+		const orangePieces = cutFruitsInto(oranges);
+		return `A mix of ${apples} pieces of apple and ${oranges} pieces of oranges makes us a perfect juice`;
+	}
+
+	console.log(yearsUntilRetirement(1943, 'Fagbagi'));
+	console.log(fruitProcessor(5,10));
+
+    </script>
   </head>
   <body>
     <h1>JavaScript Fundamentals – Part 1</h1>
